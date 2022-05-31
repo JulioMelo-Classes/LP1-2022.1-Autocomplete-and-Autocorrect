@@ -16,7 +16,7 @@ target_link_libraries(extra ncurses)
 
 
 #sem ncurses
-add_executable(basico
+add_executable(words_complete_correct
                src/main.cpp
               )
 target_include_directories(basico 
