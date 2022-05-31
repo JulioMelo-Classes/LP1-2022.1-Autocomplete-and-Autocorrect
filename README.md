@@ -1,11 +1,11 @@
 # Autocomplete e Autocorrect + TeenyTiny Text Editor (TTe)
 
 ### Sumário
-1. [Introdução](#Introdução)
-2. [O problema](#O-problema)
-3. [Interface](#Interface)
-4. [Implementação](#Implementação)
-5. [Saída](#Saída)
+1. [Introdução](#1-introdução)
+2. [Autocomplete vs Autocorrect](#2-autocomplete-vs-autocorrect)
+3. [Interface](#3-interface)
+4. [Implementação e Modelagem](#4-implementação-e-modelagem)
+5. [Saída](#5-saída)
 
 # 1-Introdução
 
@@ -13,7 +13,7 @@ Autocomplete é uma ferramenta comum em aplicações modernas. Enquanto o usuár
 
 Segue abaixo um exemplo típico do Autocomplete e do Autocorrect:
 
-<img src="./pics/google.png" width="350">
+<img src="./pics/wa.png" width="350">
 
 <img src="./pics/auto_correct.png" width="350">
 
@@ -78,7 +78,7 @@ Depois de ler e processar a base de dados de entrada, o seu sistema deve pergunt
 
 Após isso o programa deve perguntar novamente por um novo prefixo de palavra ou sentença até que o usuário envie EOF(<kbd>Ctrl</kbd> + <kbd>z</kbd>) para terminar.
 
-# 4-Implementação e Modelagem do Problema
+# 4-Implementação e Modelagem
 
 Fique à vontade para modelar o programa como você achar que deve. No entanto, faça ao menos 4 classes:
 
@@ -111,7 +111,7 @@ A ncurses é uma biblioteca muito usada em muitas aplicações de terminal pois 
 
 A versão dinâmica requer que você tenha feito a versão estática, no entanto algumas modificações nos passos mostrados na versão estática podem fazer com que a versão interativa fique inusável, por exemplo, calcular a distancia de edição a cada letra digitada. Pense em alguma estratégia para mitigar os problemas de desempenho especialmente limitando a quantidade de palavras buscadas, usando melhor a memória (com cache por exemplo) ou melhorando os algoritmos (versões iterativas são mais rápidas do que versões recursivas, por exemplo).
 
-# Saída
+# 5-Saída
 
 Seguem algumas saídas, cada uma com base em uma base de dados diferente. O usuário entra com __"Sao"__.
 
