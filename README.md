@@ -6,6 +6,7 @@
 3. [Interface](#3-interface)
 4. [Implementação e Modelagem](#4-implementação-e-modelagem)
 5. [Saída](#5-saída)
+6. [Validação e Testes](#6-validação-e-testes)
 
 # 1-Introdução
 
@@ -127,6 +128,14 @@ sao pedro da cova, brazil     | sai
 ```
 
 Note que o programa não deve ser **case sensitive**. Ou seja, não deve fazer diferença se o usuário digita "Sao", "sao", "SAO",  ou qualquer variação de maiúscula ou minúscula. A entrada do usuário deve ser convertida para um case qualquer (todas maiúsculas ou todas minúsculas), para facilitar a operação de busca na base de dados.
+
+# 6-Validação e testes
+
+Neste trabalho o ônus de testar e mostrar as implementações das funcionalidades é totalmente seu! Invista em criar testes e em automatizar o processo de testes uma vez que você irá precisar demonstrar a implementação do caso de uso básico, casos de erro e as funcionalidades.
+
+Tente variar a base de dados e testar especialmente os algoritmos envolvidos para mostrar que funcionam corretamente e que a saída desejada é a que está sendo
+mostrada no caso de teste.
+
 
 # Autorship
 
