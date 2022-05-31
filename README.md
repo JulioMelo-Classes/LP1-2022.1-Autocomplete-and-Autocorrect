@@ -1,4 +1,4 @@
-# Autocomplete e Autocorrect + TeenyTiny Text Editor (TTe)
+# Autocomplete e Autocorrect
 
 ### Sumário
 1. [Introdução](#1-introdução)
@@ -65,8 +65,8 @@ Veja que diferente do problema de completar, neste caso queremos candidatos à p
 No exemplo abaixo, o programa tem nome de `words_complete_correct`, ele deve ler os argumentos da linha de comando como segue:
 
 ```
-% ./TTe
-Usage: TTe <databse_file>
+% ./words_complete_correct
+Usage: words_complete_correct <databse_file>
   onde <database_file> é a base de dados contendo os pesos e as palavras a serem consideradas
         -[i|s] -s representa a versão estática, enquanto -i representa a versão interativa do editor.
 ```
@@ -104,12 +104,12 @@ Outro ponto à observar é o uso de referencias ao invés de cópias quando trat
 
 ## 4.1 Versão interativa (Extra)
 
-A versão dinâmica é uma variação da versão estática mas onde o usuário não precisa digitar o texto e pressionar enter. Nessa versão as sugestões de autocomplete
+A versão interativa é uma variação da versão estática onde o usuário não precisa digitar o texto e pressionar enter. Nessa versão as sugestões de autocomplete
 são exibidas a medida que o usuário digita algum texto. Para fazer isso você precisará usar uma biblioteca externa chamada [ncurses](https://en.wikipedia.org/wiki/Ncurses), ou algo similar (não dá pra fazer "facilmente" com cin/getline).
 
-A ncurses é uma biblioteca muito usada em muitas aplicações de terminal pois permite um bom nível de controle da posição do cursor e de outras utilidades da interface de terminal. Como parte deste trabalho segue um exemplo de uso da ncurses, mas existem bastante tutoriais online, um muito bom é [este](https://terminalroot.com.br/ncurses/). Veja que a curses é uma biblioteca de C, embora ela possa ser usada com c++, tente usar C apenas para se comunicar com a biblioteca, e C++ para todo resto (evite usar char* por exemplo, trocando por `std::string s + s.char_str()`).
+A ncurses é uma biblioteca muito usada em muitas aplicações de terminal pois permite um bom nível de controle da posição do cursor e de outras utilidades da interface de terminal. Como parte deste trabalho segue um exemplo de uso da ncurses, para compilar e testar crie a pasta build e faça `cmake --build . --target words_complete_correct_extra` o nome do executável é `words_complete_correct_`. O código do exemplo está no [main_ncurses](./src/main_ncurses.cpp). Existem ainda bastante tutoriais online sobre o uso desta biblioteca, um muito bom é [este](https://terminalroot.com.br/ncurses/). Veja que a curses é uma biblioteca feita para ser usada com C, embora ela possa ser usada com C++, tente usar as construções de C apenas para se comunicar com a biblioteca enquanto usa C++ para todo resto (evite usar char* por exemplo, trocando por `std::string s + s.char_str()`).
 
-A versão dinâmica requer que você tenha feito a versão estática, no entanto algumas modificações nos passos mostrados na versão estática podem fazer com que a versão interativa fique inusável, por exemplo, calcular a distancia de edição a cada letra digitada. Pense em alguma estratégia para mitigar os problemas de desempenho especialmente limitando a quantidade de palavras buscadas, usando melhor a memória (com cache por exemplo) ou melhorando os algoritmos (versões iterativas são mais rápidas do que versões recursivas, por exemplo).
+A versão interativa requer que você tenha feito a versão estática, no entanto algumas modificações nos passos mostrados na versão estática podem fazer com que a versão interativa fique inusável, por exemplo, calcular a distancia de edição a cada letra digitada. Pense em alguma estratégia para mitigar os problemas de desempenho especialmente limitando a quantidade de palavras buscadas, usando melhor a memória (com cache por exemplo) ou melhorando os algoritmos (versões iterativas são mais rápidas do que versões recursivas, por exemplo).
 
 # 5-Saída
 
