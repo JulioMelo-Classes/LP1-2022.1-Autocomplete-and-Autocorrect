@@ -70,7 +70,7 @@ int main(int argc, char *argv[]){
                     break;
                 case KEY_ENTER: //enter do keypad
                 case '\n':
-                    texto_atual.append(choices[highlight]);
+                    texto_atual.append(choices[highlight-1]);
                     break;
                 case KEY_BACKSPACE: //backspace varia
                 case 127:
